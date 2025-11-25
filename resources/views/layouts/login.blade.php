@@ -22,8 +22,9 @@
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <img src="#" alt="Logo {{ $setup_app->nama_aplikasi }}"
-                    class="brand-image img-circle mr-2 elevation-1" style="height: 50px; width: 50px;">
+                <img src="{{ $setup_app->logo_aplikasi ? asset('storage/uploads/' . $setup_app->logo_aplikasi) : '' }}"
+                    alt="Logo {{ $setup_app->nama_aplikasi }}" class="brand-image img-circle mr-2 elevation-1"
+                    style="height: 50px; width: 50px;">
                 <p class="font-weight-bold text-xl mb-0">{{ $setup_app->nama_aplikasi }}</p>
                 <p class="mb-0 text-muted text-sm">{{ $setup_app->deskripsi_aplikasi }}</p>
             </div>
