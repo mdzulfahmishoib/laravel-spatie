@@ -137,7 +137,7 @@
                       @else
                           {{-- Menu tunggal --}}
                           <li class="nav-item">
-                              <a href="{{ $menu->route_name ? route($menu->route_name) : url($menu->url) }}"
+                              <a href="{{ $menu->url ?? ($menu->route_name ? route($menu->route_name) : '#') }}"
                                   class="nav-link {{ ($menu->route_name && request()->routeIs($menu->route_name . '*')) ||
                                   (!$menu->route_name && $menu->url && request()->is(ltrim($menu->url, '/') . '*'))
                                       ? 'active'
