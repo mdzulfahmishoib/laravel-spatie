@@ -6,7 +6,8 @@
 
 @section('breadcrumb')
     @parent
-    <li class="breadcrumb-item active">Management User / User Management / Buat User Baru</li>
+    <li class="breadcrumb-item active">Management User</li>
+    <li class="breadcrumb-item active">User Management</li>
 @endsection
 
 @section('content')

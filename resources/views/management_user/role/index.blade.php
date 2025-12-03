@@ -10,7 +10,8 @@
 
 @section('breadcrumb')
     @parent
-    <li class="breadcrumb-item active">Management User / Role Management</li>
+    <li class="breadcrumb-item active">Management User</li>
+    <li class="breadcrumb-item active">Role Management</li>
 @endsection
 
 @section('content')
@@ -41,11 +42,11 @@
                         <td>{{ $role->name }}</td>
                         <td>
                             <div class="btn-group">
-                                <a href="{{ url('roles/'. $role->id .'/give-permissions') }}" class="btn btn-success btn-sm">
+                                <a href="{{ url('roles/'. $role->id .'/give-permissions') }}" class="btn btn-success btn-sm" title="Berikan Hak Role Permission">
                                     <i class="fa fa-user-check"></i>
                                 </a>
-                                <button type="button" class="btn btn-primary btn-sm editRoleBtn" data-id="{{ $role->id }}" data-name="{{ $role->name }}" data-action="{{ url('management_user/roles/' . $role->id) }}"> <i class="fa fa-pen"></i> </button>
-                                <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deleteRole('{{ url('roles/' . $role->id . '/delete') }}')"> <i class="fa fa-trash"></i> </a>
+                                <button type="button" class="btn btn-primary btn-sm editRoleBtn" data-id="{{ $role->id }}" data-name="{{ $role->name }}" data-action="{{ url('management_user/roles/' . $role->id) }}" title="Edit Data"> <i class="fa fa-pen"></i> </button>
+                                <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deleteRole('{{ url('roles/' . $role->id . '/delete') }}')" title="Hapus Data"> <i class="fa fa-trash"></i> </a>
                             </div>
                         </td>
                     </tr>

@@ -10,7 +10,8 @@
 
 @section('breadcrumb')
     @parent
-    <li class="breadcrumb-item active">Management User / Permission Management</li>
+    <li class="breadcrumb-item active">Management User</li>
+    <li class="breadcrumb-item active">Permission Management</li>
 @endsection
 
 @section('content')
@@ -55,8 +56,8 @@
                                 <td>{{ $permission->name }}</td>
                                 <td>
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-primary btn-sm editPermissionBtn" data-id="{{ $permission->id }}" data-name="{{ $permission->name }}" data-action="{{ url('management_user/permission/'.$permission->id) }}"> <i class="fa fa-pen"></i> </button>
-                                        <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deletePermission('{{ url('permission/' . $permission->id . '/delete') }}')">
+                                        <button type="button" class="btn btn-primary btn-sm editPermissionBtn" data-id="{{ $permission->id }}" data-name="{{ $permission->name }}" data-action="{{ url('management_user/permission/'.$permission->id) }}" title="Edit Data"> <i class="fa fa-pen"></i> </button>
+                                        <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deletePermission('{{ url('permission/' . $permission->id . '/delete') }}')" title="Hapus Data">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </div>

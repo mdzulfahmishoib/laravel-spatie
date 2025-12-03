@@ -10,7 +10,8 @@
 
 @section('breadcrumb')
     @parent
-    <li class="breadcrumb-item active">Management User / Permission Management / Edit Permission</li>
+    <li class="breadcrumb-item active">Management User</li>
+    <li class="breadcrumb-item active">Permission Management</li>
 @endsection
 
 @section('content')

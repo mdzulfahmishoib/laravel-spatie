@@ -10,7 +10,8 @@
 
 @section('breadcrumb')
     @parent
-    <li class="breadcrumb-item active">Management User / User Management</li>
+    <li class="breadcrumb-item active">Management User</li>
+    <li class="breadcrumb-item active">User Management</li>
 @endsection
 
 @section('content')
@@ -49,6 +50,7 @@
                                 </label>
                             </form>
                         </td>
+
                         <td>{{ $user->name }}</td> 
                         <td>{{ $user->username }}</td> 
                         <td>{{ $user->email }}</td>
@@ -64,8 +66,8 @@
                         </td>
                         <td>
                             <div class="btn-group">
-                            <a href="{{ url('management_user/users/'. $user->id .'/edit') }}" class="btn btn-primary btn-sm"><i class="fa fa-pen"></i></a>
-                            <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deleteUser('{{ url('users/' . $user->id . '/delete') }}')">
+                            <a href="{{ url('management_user/users/'. $user->id .'/edit') }}" class="btn btn-primary btn-sm" title="Edit Data"><i class="fa fa-pen"></i></a>
+                            <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deleteUser('{{ url('users/' . $user->id . '/delete') }}')" title="Hapus Data">
                                 <i class="fa fa-trash"></i>
                             </a>
                             </div>
